@@ -1,0 +1,24 @@
+<div class="login-container">
+  <div class="login-form">
+    <h1>เข้าสู่ระบบ</h1>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="input-group">
+        <label for="username">ชื่อผู้ใช้</label>
+        <input type="text" id="username" name="username" [(ngModel)]="username" required />
+      </div>
+      <div class="input-group">
+        <label for="password">รหัสผ่าน</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required />
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid">เข้าสู่ระบบ</button>
+    </form>
+    <div *ngIf="loginError" class="error-message">
+      ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง
+    </div>
+
+    <!-- ปุ่ม Google Login -->
+    <div class="google-login-button">
+      <div class="g-signin2" (click)="signInWithGoogle()" data-onsuccess="onSignIn"></div>
+    </div>
+  </div>
+</div>

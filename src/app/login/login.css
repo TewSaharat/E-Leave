@@ -1,0 +1,86 @@
+/* สไตล์พื้นฐานสำหรับการจัดการฟอร์ม */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.login-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;  /* เพิ่มขนาดสูงสุด */
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #333;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 16px;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+.error-message {
+  color: red;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+/* ปรับสไตล์ให้เหมาะสมกับปุ่ม Google Login */
+.google-login-button {
+  margin-top: 1.5rem;
+}
+
+.g-signin2 {
+  width: 100%;
+  height: 40px;
+  background-color: #4285F4;  /* สี Google */
+  border-radius: 4px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.g-signin2:hover {
+  background-color: #357ae8;  /* สีเมื่อ hover */
+}
