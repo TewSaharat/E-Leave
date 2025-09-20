@@ -1,4 +1,28 @@
 
+<div class="clsaa">
+  <div class="navbar">
+    <img class="profile-img" src="profile.jpg" alt="Profile">
+    
+    <div class="nav-links">
+      <a  href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Logout</a>
+    </div>
+  </div>
 
-
+<div class="sidebar">
+    <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <img src="profile.jpg"><span>Dashboard</span>
+  </a>
+  <a routerLink="/Profile" routerLinkActive="active">
+    <img src="profile.jpg"><span>Profile</span>
+  </a>
+  <a href="Settings"><img src="profile.jpg"><span>Settings</span></a>
+  <a href="#"><img src="profile.jpg"><span>Logout</span></a>
+</div>
+<div class="content">
 <router-outlet></router-outlet>
+</div>
+</div>
+

@@ -1,0 +1,55 @@
+
+.content {
+  margin-top: 80px; 
+  overflow-y: auto; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 คอลัมน์ */
+  gap: 20px; /* ระยะห่างระหว่างการ์ด */
+ 
+}
+
+.card1{
+    background-color: #f9a200;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card2{
+    background-color: #4CAF50;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card3{
+    background-color: #f44336;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card4{
+    background-color: #2196F3;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card1, .card2, .card3, .card4 {
+  padding: 10px;
+  font-size: 1;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  display: flex;                /* ใช้ flexbox */
+  flex-direction: column;       /* เรียงแนวตั้ง */
+  justify-content: space-between; /* ดัน h2 ไปบน, h3 ไปล่าง */                /* กำหนดความกว้างการ์ด (ปรับได้เอง) */
+  height: 200px;                /* กำหนดความสูงการ์ด (ปรับได้เอง) */
+  width: 550px;                 /* กำหนดความกว้างการ์ด (ปรับได้เอง) */
+}
+

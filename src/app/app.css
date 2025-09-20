@@ -1,0 +1,160 @@
+/* กำหนดสไตล์สำหรับ container หลัก */
+.clsaa {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* เพื่อให้เนื้อหาหลักไม่ล้นออกนอก */
+}
+
+/* สไตล์สำหรับ Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+  color: white;
+  position: fixed;
+  width: 97%; /* ทำให้ Navbar ครอบคลุมทั้งหน้าจอ */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: margin-left 0.3s ease; 
+}
+
+
+
+/* Logo ใน Navbar */
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* ลิงก์ใน Navbar */
+.navbar .nav-links {
+  display: flex;
+}
+
+.navbar .nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* สีของลิงก์ใน Navbar เมื่อ hover */
+.navbar .nav-links a:hover {
+  color: #ff9100;
+}
+
+.navbar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* สไตล์สำหรับ Sidebar */
+.sidebar {
+  width: 80px; /* ความกว้างเริ่มต้นของ Sidebar */
+  background-color: #333;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding-top: 60px; /* ให้ไม่ชนกับ Navbar */
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease; /* เพิ่มการเปลี่ยนแปลงของความกว้าง */
+  z-index: 999;
+}
+
+/* เมื่อ hover ที่ sidebar, ให้ขยายความกว้างเป็น 200px */
+.sidebar:hover {
+  width: 200px; /* ขยายความกว้างเมื่อ hover */
+}
+
+/* สไตล์ลิงก์ใน Sidebar */
+.sidebar a {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  white-space: nowrap; /* กันข้อความตัดบรรทัด */
+}
+
+/* รูปใน Sidebar */
+.sidebar a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* ซ่อนข้อความไว้ก่อน */
+.sidebar a span {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* เมื่อ Hover Sidebar ให้ข้อความค่อยๆ โผล่ */
+.sidebar:hover a span {
+  opacity: 1;
+}
+
+
+.sidebar a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* เปลี่ยนสีเมื่อ hover */
+.sidebar a:hover {
+  background-color: #ff9100;
+  opacity: 1;
+}
+
+.sidebar a.active {
+  background-color: #ff9100;
+  font-weight: bold;
+}
+
+.sidebar a span {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.clsaa .content {
+  margin-left: 60px; 
+  padding: 20px;
+  flex-grow: 0;
+  transition: margin-left 0.3s ease; 
+}
+
+/* เมื่อ Sidebar ขยาย, ปรับ margin-left ของเนื้อหาหลัก */
+.sidebar:hover + .content {
+  margin-left: 200px; 
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ให้เนื้อหาหลักเต็มความสูงของ*/
+    background-color: #f4f4f4;
+    margin-top: 60px; /* เพื่อไม่ให้เนื้อหาทับกับ Navbar */
+    transition: margin-left 0.3s ease;              
+}
+
+
