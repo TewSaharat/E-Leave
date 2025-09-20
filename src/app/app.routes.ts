@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 import { Profile } from './profile/profile';
 
 
-
 export const routes: Routes = [
   { path: '', component: Login },
   { path: 'home', component: HomePege },  

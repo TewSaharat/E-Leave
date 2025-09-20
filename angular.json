@@ -20,11 +20,10 @@
             "tsConfig": "tsconfig.app.json",
            "assets": [
               "src/favicon.ico",
-              "src/assets",
+              "src/assets/img",
               {
                 "glob": "**/*",
-                "input": "src/assets/img",
-                "output": "assets/img"
+                "input": "src/assets/img"
               }
             ],
             "styles": [

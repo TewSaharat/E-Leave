@@ -1,6 +1,5 @@
 import { Component, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HomePege } from "./home-pege/home-pege";
 
 @Component({
   selector: 'app-root',

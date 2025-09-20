@@ -1,9 +1,16 @@
 
 <div class="clsaa">
   <div class="navbar">
-    <img class="profile-img" src="profile.jpg" alt="Profile">
+    <img class="profile-img" src="assets/img/account.png" alt="Profile">
+    <div>
+    <input type="checkbox" id="dark-mode">
+    <input type="checkbox" id="dark-mode">
+    <label for="dark-mode"></label>
     
+  <div class="background"></div>
+    </div>
     <div class="nav-links">
+        
       <a  href="#">Home</a>
       <a href="#">About</a>
       <a href="#">Services</a>
@@ -16,10 +23,10 @@
     <img src="assets/img/dashboard.png"><span>Dashboard</span>
   </a>
   <a routerLink="/Profile" routerLinkActive="active">
-    <img src="profile.jpg"><span>Profile</span>
+    <img src="assets/img/account.png"><span>Profile</span>
   </a>
-  <a href="Settings"><img src="profile.jpg"><span>Settings</span></a>
-  <a href="#"><img src="profile.jpg"><span>Logout</span></a>
+  <a href="Settings"><img src="assets/img/settings.png"><span>Settings</span></a>
+  <a href="#"><img src="assets/img/logout.png"><span>Logout</span></a>
 </div>
 <div class="content">
 <router-outlet></router-outlet>
