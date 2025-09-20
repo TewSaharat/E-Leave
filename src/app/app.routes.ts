@@ -8,7 +8,7 @@ import { Profile } from './profile/profile';
 
 export const routes: Routes = [
   { path: '', component: Login },
-  { path: 'home', component: HomePege },  // กำหนดเส้นทางหน้า HomePage
+  { path: 'home', component: HomePege },  
   { path: 'Profile', component: Profile },  
 ];
 
