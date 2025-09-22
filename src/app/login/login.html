@@ -1,27 +1,29 @@
 <div class="login-container">
-  <div class="login-form">
-    <img src="assets/img/account.png" width="100" class="login-icon">
-    <h1 ><img src="assets/img/login.png" width="30">เข้าสู่ระบบ</h1>
-    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
-      <div class="input-group">
-        <label for="username">ชื่อผู้ใช้</label>
-        <input type="text" id="username" name="username" [(ngModel)]="username" required />
-      </div>
-      <div class="input-group">
-        <label for="password">รหัสผ่าน</label>
-        <input type="password" id="password" name="password" [(ngModel)]="password" required />
-      </div>
-      <button type="submit" [disabled]="!loginForm.valid">เข้าสู่ระบบ</button>
-    </form>
-    <div *ngIf="loginError" class="error-message">
-      ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง
+  <h2>เข้าสู่ระบบ</h2>
+
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label>Username</label>
+      <input type="text" [(ngModel)]="username" name="username" required />
     </div>
 
-    <!-- ปุ่ม Google Login -->
-    <button type="button" class="google-button" (click)="signInWithGoogle()">
-  <img src="assets/img/google.png" width="20" style="vertical-align:middle; margin-right:8px;">
-  เข้าสู่ระบบด้วย Google
+    <div>
+      <label>Password</label>
+      <input type="password" [(ngModel)]="password" name="password" required />
+    </div>
+
+    <button type="submit">เข้าสู่ระบบ</button>
+
+    <div *ngIf="loginError" style="color:red;">
+      ❌ ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง
+    </div>
+  </form>
+
+  <hr />
+
+  <!-- ปุ่ม Login ด้วย Google -->
+<button type="button" (click)="googleLoginService.signIn()">
+  Login with Google
 </button>
 
-  </div>
 </div>

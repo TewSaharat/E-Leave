@@ -7,7 +7,7 @@ import { Profile } from "../profile/profile";
   standalone:true,
   imports: [RouterModule],
   templateUrl: './home-pege.html',
-  styleUrl: './home-pege.css'
+  styleUrls: ['./home-pege.css']
 })
 export class HomePege {
 

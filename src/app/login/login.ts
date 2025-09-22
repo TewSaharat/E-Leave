@@ -17,14 +17,16 @@ export class Login implements OnInit {
   loginError = false;
 
   // เพิ่ม Router ในคอนสตรัคเตอร์
-  constructor(
-    private googleLoginService: GoogleLoginService,
-    private router: Router  
-  ) {}
+constructor(
+  public googleLoginService: GoogleLoginService,   // 🔹 เปลี่ยนจาก private → public
+  private router: Router
+) {}
 
-  ngOnInit() {
-    this.googleLoginService.initGoogleLogin(); 
-  }
+
+
+ngOnInit() {
+
+}
 
 onSubmit() {
   if (this.username === 'admin' && this.password === 'admin123') {
@@ -36,8 +38,5 @@ onSubmit() {
   }
 }
 
-  // เรียกใช้บริการ Google Login
-  signInWithGoogle() {
-    this.googleLoginService.signIn(); 
-  }
+
 }
