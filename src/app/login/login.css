@@ -65,10 +65,20 @@ button:disabled {
 }
 
 /* ปรับสไตล์ให้เหมาะสมกับปุ่ม Google Login */
-.google-login-button {
-  margin-top: 1.5rem;
+.google-button {
+  width: 100%;
+  height: 40px;
+  background-color: #4285F4;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
 }
 
+.google-button:hover {
+  background-color: #357ae8;
+}
 .g-signin2 {
   width: 100%;
   height: 40px;

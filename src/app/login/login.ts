@@ -26,15 +26,15 @@ export class Login implements OnInit {
     this.googleLoginService.initGoogleLogin(); 
   }
 
-  onSubmit() {
-    if (this.username === 'admin' && this.password === 'admin123') {
-      alert('เข้าสู่ระบบสำเร็จ!');
-      this.loginError = false;
-      this.router.navigate(['/home']);  
-    } else {
-      this.loginError = true;
-    }
+onSubmit() {
+  if (this.username === 'admin' && this.password === 'admin123') {
+    alert('เข้าสู่ระบบสำเร็จ!');
+    this.loginError = false;
+    this.router.navigate(['/home']);  
+  } else {
+    this.loginError = true;
   }
+}
 
   // เรียกใช้บริการ Google Login
   signInWithGoogle() {
